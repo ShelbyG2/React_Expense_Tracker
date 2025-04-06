@@ -1,0 +1,36 @@
+.budget-list {
+  margin-top: 2rem;
+}
+
+.budget-item {
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--border-radius);
+  background-color: var(--dark-color);
+  padding: 1em;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.budget-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+.budget-category {
+  display: flex;
+}
+.budget-category i {
+  font-size: 1.25rem;
+  color: var(--primary-light);
+  margin: 2px;
+}
+.budget-amount {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1.5rem;
+}
+.budget-amount span {
+  color: var(--primary-light);
+  font-weight: 700;
+}
