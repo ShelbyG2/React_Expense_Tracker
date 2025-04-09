@@ -35,9 +35,11 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="submit" className="btn-primary">
-              Login
-            </button>
+            <Link to="/dashboard">
+              <button type="submit" className="btn-primary">
+                Login
+              </button>
+            </Link>
             <div className="social-login">
               <p>Or Sign in with social platforms</p>
               <div className="social-icons">

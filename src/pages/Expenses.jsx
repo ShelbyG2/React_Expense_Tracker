@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Notification from "../components/Notification";
+import "../styles/pages/expenses.css";
 
 const Expenses = () => {
   const [showModal, setShowModal] = useState(false);

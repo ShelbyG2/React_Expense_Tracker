@@ -11,17 +11,26 @@ import SavingGoals from "./pages/SavingGoals";
 import Settings from "./pages/Settings";
 import Login from "./pages/login";
 import Signup from "./pages/Signup";
+import { useState } from "react";
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
-    <Router>
+    <>
       <div className="app-layout">
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
+        <Router>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/budgets" element={<Budgets />} />
+            <Route path="/expenses" element={<Expenses />} />
+            <Route path="/reminders" element={<Reminders />} />
+            <Route path="/saving-goals" element={<SavingGoals />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </Router>
       </div>
-    </Router>
+    </>
   );
 }
 

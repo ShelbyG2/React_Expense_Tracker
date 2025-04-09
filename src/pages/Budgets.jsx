@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Notification from "../components/Notification";
+import "../styles/pages/budgets.css";
 
 const Budgets = () => {
   const [showModal, setShowModal] = useState(false);
@@ -80,6 +81,15 @@ const Budgets = () => {
             + ADD BUDGET
           </button>
         </div>
+        {notification.show && (
+          <Notification
+            type={notification.type}
+            message={notification.message}
+            onClose={() =>
+              setNotification({ show: false, type: "", message: "" })
+            }
+          />
+        )}
         <div className="budget-list">
           {Object.keys(budgets).map((category) => (
             <div key={category} className="budget-item">
@@ -155,15 +165,6 @@ const Budgets = () => {
                 </form>
               </div>
             </div>
-            {notification.show && (
-              <Notification
-                type={notification.type}
-                message={notification.message}
-                onClose={() =>
-                  setNotification({ show: false, type: "", message: "" })
-                }
-              />
-            )}
           </div>
         )}
       </div>
