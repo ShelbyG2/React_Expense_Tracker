@@ -274,9 +274,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 Njenga J
-
-Project Link: [https://github.com/yourusername/expense-tracker](https://github.com/yourusername/expense-tracker)
-
 ---
 
 <div align="center">
